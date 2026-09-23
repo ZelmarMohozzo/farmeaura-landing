@@ -1,0 +1,1 @@
+{"name":"farmeaura-landing","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"start":"node server.mjs","lint":"node --check dist/app.js && node --check dist/config.js && node --check server.mjs && node --check scripts/validate.mjs","build":"node scripts/validate.mjs","test":"node scripts/smoke.mjs"}}
