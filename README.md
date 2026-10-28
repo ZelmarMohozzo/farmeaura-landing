@@ -28,7 +28,9 @@ No requiere base de datos ni variables secretas. El servidor solo entrega archiv
 
 ## Dominio
 
-Se respetó `https://farmearaura.app/` del texto adjunto en canonical, Open Graph y pie. Atención: la marca del logo se escribe `farmeaura`; confirmar si el dominio comprado es `farmeaura.app` o `farmearaura.app` antes de publicar. Cambiar ambos campos y el pie en `dist/index.html` si corresponde.
+La landing se sirve en `https://farmeaura.app/`, el dominio usado en canonical, Open Graph y pie de `dist/index.html`.
+
+Los documentos legales se publican aparte, en `https://legal.farmeaura.app`: [Privacidad](https://legal.farmeaura.app/privacidad), [Términos](https://legal.farmeaura.app/terminos) y [Eliminar cuenta](https://legal.farmeaura.app/eliminar-cuenta). Se generan desde la carpeta `site/` del repositorio de la app; el pie de la landing solo enlaza a ellos.
 
 ## Waitlist: estado real
 
@@ -42,7 +44,7 @@ window.FARMEAURA_CONFIG = { waitlistEndpoint: '/api/waitlist' };
 
 Contrato: `POST /api/waitlist`, JSON `{ "name": "Nombre", "email": "correo@ejemplo.com" }`. Solo se muestra éxito al recibir HTTP 2xx y JSON `{ "ok": true }`. Errores HTTP, respuesta no JSON y timeout muestran error recuperable. La integración prevista es del mismo origen; si la API se hospeda en otro origen, configurar un proxy o adaptar CSP/CORS explícitamente.
 
-Implementar validación en servidor, almacenamiento, límites de solicitudes, tratamiento de duplicados y documentación de privacidad antes de habilitar el registro. Las URLs sociales, contacto y documentos legales están pendientes: se muestran como texto inactivo, sin destinos ficticios. Sustituir por enlaces reales cuando estén definidos.
+Implementar validación en servidor, almacenamiento, límites de solicitudes, tratamiento de duplicados y documentación de privacidad antes de habilitar el registro. Las URLs sociales y el contacto están pendientes: se muestran como texto inactivo, sin destinos ficticios. Sustituir por enlaces reales cuando estén definidos. Los documentos legales ya enlazan a `legal.farmeaura.app` (ver Dominio).
 
 ## Diseño y accesibilidad
 
