@@ -1,6 +1,6 @@
 # Farme Aura — landing de prelanzamiento
 
-Landing de una página, HTML/CSS/JavaScript, sin dependencias externas. Logos originales suministrados, sin alteración del símbolo o proporciones. Fuentes de sistema: no hay solicitudes a Google ni bloqueos por fuentes externas. No se publicó ni se desplegó.
+Landing de una página, HTML/CSS/JavaScript, sin dependencias externas. Logos originales suministrados, sin alteración del símbolo o proporciones: `assets/logo.webp` es el original (para fondos claros) y la página usa `assets/logo-negativo.webp`, la misma pieza con «farme» en blanco y sin margen transparente, para el fondo oscuro. El ícono (`assets/icono.webp` en la página, `favicon.png` y `apple-touch-icon.png`) es el símbolo 67 sobre fondo negro. Fuentes de sistema: no hay solicitudes a Google ni bloqueos por fuentes externas. No se publicó ni se desplegó.
 
 ## Abrir en local
 

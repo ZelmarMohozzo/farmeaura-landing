@@ -3,8 +3,8 @@ import { server } from '../server.mjs';
 await new Promise(resolve => server.listen(0,'127.0.0.1',resolve));
 const origin = 'http://127.0.0.1:'+server.address().port;
 try {
-for (const route of ['/','/styles.css','/app.js','/config.js','/assets/icon.png','/assets/logo.webp']) { const r = await fetch(origin+route); assert.equal(r.status,200,route); assert(r.headers.get('content-security-policy')); }
-assert.equal((await fetch(origin+'/assets/logo.webp')).headers.get('content-type'),'image/webp');
+for (const route of ['/','/styles.css','/app.js','/config.js','/assets/icono.webp','/assets/favicon.png','/assets/apple-touch-icon.png','/assets/logo-negativo.webp']) { const r = await fetch(origin+route); assert.equal(r.status,200,route); assert(r.headers.get('content-security-policy')); }
+assert.equal((await fetch(origin+'/assets/logo-negativo.webp')).headers.get('content-type'),'image/webp');
 assert.equal((await fetch(origin+'/api/waitlist',{method:'POST'})).status,405);
 assert.equal((await fetch(origin+'/missing')).status,404);
 assert.equal((await fetch(origin+'/package.json')).status,404);
